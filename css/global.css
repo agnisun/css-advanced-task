@@ -1,0 +1,167 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: TT Lakes;
+  line-height: 1.3;
+  color: #1b1c21;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.button {
+  border: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ff3e79;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.button img {
+  width: 20px;
+  height: 20px;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 320px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.8rem;
+  box-shadow: 10px 0px 30px 0px rgba(0, 0, 0, 0.2);
+}
+
+.menu-header {
+  padding: 1.5rem 1.5rem 0;
+  margin-bottom: 2.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-header__logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.menu-nav {
+  flex: 1 1 auto;
+}
+
+.menu-nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.menu-nav__list > li {
+  padding: 0 1.25rem;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  transition: color 0.2s linear;
+}
+
+.menu-nav__list > li:hover {
+  color: #7e7e82;
+}
+
+.menu-nav__list > li.active {
+  color: #7e7e82;
+  position: relative;
+}
+
+.menu-nav__list > li.active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-0.4rem);
+  width: 4px;
+  height: 32px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-color: #41f6d7;
+}
+
+.menu-nav__list > li > a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu-footer {
+  padding: 0 1.25rem 2rem;
+}
+
+.menu-footer__top {
+  margin-bottom: 2.5rem;
+}
+
+.menu-footer__nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.menu__mail {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+.menu__phone {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.menu-footer__langs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.menu-footer__lang {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  transition: color 0.2s linear;
+}
+
+.menu-footer__lang:hover {
+  color: #7e7e82;
+}
+
+.menu-footer__lang.active {
+  color: #7e7e82;
+}
